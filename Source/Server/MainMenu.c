@@ -63,8 +63,7 @@ int MainMenuUserRequest(int sockfd)
     // Declarations and Initializations
     // ----------------------------------
     char userInput[_MAX_CHAR_INPUT_];    // This will hold the user input.
-    // ----------------------------------
-    
+    // ----------------------------------    
     // Display the prompt
     DisplayPrompt(sockfd);
     
@@ -113,7 +112,7 @@ void DrawMenuMain(int sockfd)
     strcat(sendbuffer, "[2] - Update Personal Information\n");
     strcat(sendbuffer, "       View and change your personal account settings, such as email, address, etc.\n");
     // Leave terminate session
-    strcat(sendbuffer, "[X] - Leave Store\n");
+    strcat(sendbuffer, "[Exit] - Leave Store\n");
     strcat(sendbuffer, "       Exit from the store\n");
 	
 	write(sockfd, sendbuffer, MAXLINE);
